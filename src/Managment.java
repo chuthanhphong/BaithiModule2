@@ -51,16 +51,17 @@ public class Managment {
         String address = sc.nextLine();
         return address;
     }
-    private String inputEmail(){
-        String email=null;
+    private String inputEmail() {
+        String email = null;
         System.out.print("Nhập Email: ");
         do {
             email = sc.nextLine();
-            if (!validate.Check(Validate.REGEXEMAIL,email )) {
+            if (!validate.Check(Validate.REGEXEMAIL, email)) {
                 System.out.println("Nhập Theo đúng định dạng abcabc@gmail.com");
             }
         } while (!validate.Check(Validate.REGEXPHONENUMBER, email));
-        return emai
+        return email;
+    }
     public void add(){
         String contact = inputContact();
         String name = inputName();
